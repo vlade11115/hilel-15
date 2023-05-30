@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "blog.apps.BlogConfig"
+    "blog.apps.BlogConfig",
 ]
 
 MIDDLEWARE = [
@@ -67,8 +67,7 @@ ROOT_URLCONF = "djangoProject1.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / 'templates']
-        ,
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -86,7 +85,7 @@ WSGI_APPLICATION = "djangoProject1.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {'default': dj_database_url.config(conn_max_age=600, ssl_require=True)}
+DATABASES = {"default": dj_database_url.config(conn_max_age=600, ssl_require=True)}
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
