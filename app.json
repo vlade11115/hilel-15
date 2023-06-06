@@ -7,6 +7,11 @@
       "addons": [
         "heroku-postgresql:mini"
       ]
+    },
+    "test": {
+      "addons": [
+        "heroku-postgresql:mini"
+      ]
     }
   },
   "scripts": {
