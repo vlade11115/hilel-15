@@ -1,15 +1,25 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.urls import reverse
 
+from blog.forms import StudentForm
 from blog.models import Student
 
 
 # Create your views here.
 
 
-def index(request):
-    return render(request, "index.html")
-
-
 def students(request):
     students = Student.objects.all()
     return render(request, "students.html", {"students": students})
+
+
+def add_student(request):
+    form = StudentForm(request.POST or None)
+
+    if request.method == "GET":
+        return render(request, "add_student.html", {"form": form})
+
+    if form.is_valid():
+        form.save()
+        return redirect(reverse(students))
+    return render(request, "add_student.html", {"form": form})
