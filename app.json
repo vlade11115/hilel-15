@@ -8,5 +8,8 @@
         "heroku-postgresql:mini"
       ]
     }
+  },
+  "scripts": {
+    "postdeploy": "python manage.py migrate --noinput"
   }
 }
