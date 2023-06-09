@@ -14,7 +14,7 @@ def students(request):
 
 
 def add_student(request):
-    form = StudentForm(request.POST or None)
+    form = StudentForm(request.POST, request.FILES)
 
     if request.method == "GET":
         return render(request, "add_student.html", {"form": form})

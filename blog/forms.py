@@ -6,4 +6,4 @@ from blog.models import Student
 class StudentForm(ModelForm):
     class Meta:
         model = Student
-        fields = ('name', 'city')
+        fields = ("name", "city", "certificate")
