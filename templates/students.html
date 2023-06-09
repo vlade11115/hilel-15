@@ -1,6 +1,6 @@
 {% for s in students %}
     {{ s.name }}     {{ s.age }}
-
+    <img src=" {{ s.certificate.url }}" alt="{{ s.name }}">
     <br>
 {% endfor %}
 
